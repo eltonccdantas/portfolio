@@ -1,58 +1,592 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elton Dantas</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mediaqueries.css">
-</head>
-<body>
-    <nav id="desktop-nav">
-        <div class="logo">Elton Dantas</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-    <nav id="hamburguer-nav">
-        <div class="logo">Elton Dantas</div>
-        <div class="hamburguer-menu">
-            <div class="hamburguer-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Elton Dantas</title>
+
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="mediaqueries.css" />
+    </head>
+    <body>
+        <nav id="desktop-nav">
+            <div class="logo">Elton Dantas</div>
+            <div>
+                <ul class="nav-links">
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#experience">Habilidades</a></li>
+                    <li><a href="#certifications">Certificações</a></li>
+                    <li><a href="#projects">Projetos</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
             </div>
-            <div class="menu-links">
-                <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </nav>
+
+        <nav id="hamburger-nav">
+            <div class="logo">Elton Dantas</div>
+            <div class="hamburger-menu">
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="menu-links">
+                    <li><a href="#about" onclick="toggleMenu()">Sobre</a></li>
+                    <li>
+                        <a href="#experience" onclick="toggleMenu()"
+                            >Habilidades</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#certifications" onclick="toggleMenu()"
+                            >Certificações</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#projects" onclick="toggleMenu()">Projetos</a>
+                    </li>
+                    <li>
+                        <a href="#contact" onclick="toggleMenu()">Contato</a>
+                    </li>
+                </div>
             </div>
-        </div>
-    </nav>
-    <section id="profile">
-        <div class="section__pic-container">
-            <img src="./assets/profile-pic.png" alt="Elton Dantas profile picture">
-        </div>
-        <div class="section__text">
-            <p class="section__text__p1">Hello, I'm</p>
-            <h1 class="title">Elton Dantas</h1>
-            <p class="section__text__p2">Frontend Developer</p>
-            <div class="btn-container">
-                <button class="btn btn-color-2" onclick="window.open('./assets/resume-example.pdf')">Download CV</button>
-                <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
+        </nav>
+        <!--hamburger-nav-->
+
+        <section id="profile">
+            <div class="section__pic-container">
+                <img
+                    src="./assets/elton-profile-circle-v2.png"
+                    alt="Foto do perfil de Elton"
+                />
             </div>
-            <div id="socials-container">
-                <img src="./assets/linkedin.png" alt="My GitHub profile" class="icon" onclick="location.href='https://www.linkedin.com/in/eltonccdantas/'">
-                <img src="./assets/github.png" alt="My LinkedIn profile" class="icon" onclick="location.href='https://github.com/eltonccdantas'">
+            <div class="section__text">
+                <p class="section__text__p1">Olá, eu sou</p>
+                <h1 class="title">Elton Dantas</h1>
+                <p class="section__text__p2">
+                    QA<br />& <br />Desenvolvedor
+                </p>
+                <div class="btn-container">
+                    <button
+                        class="btn btn-color-2"
+                        onclick="window.open('./assets/Currículo - Elton Dantas.pdf')"
+                    >
+                        Baixar CV
+                    </button>
+                    <button
+                        class="btn btn-color-1"
+                        onclick="location.href='./#contact'"
+                    >
+                        Contato
+                    </button>
+                </div>
+                <div id="socials-container">
+                    <a
+                        href="https://www.linkedin.com/in/eltonccdantas/"
+                        target="_blank"
+                    >
+                        <img
+                            src="./assets/linkedin.png"
+                            alt="Meu perfil no LinkedIn"
+                            class="icon"
+                        />
+                    </a>
+
+                    <a href="https://github.com/eltonccdantas" target="_blank">
+                        <img
+                            src="./assets/github.png"
+                            alt="Meu perfil no GitHub"
+                            class="icon"
+                        />
+                    </a>
+                    <a href="https://wa.me/5581998413730" target="_blank">
+                        <img
+                            src="./assets/whatsapp.png"
+                            alt="Meu WhatsApp"
+                            class="icon"
+                        />
+                    </a>
+                </div>
             </div>
-        </div>
-    </section>
-    <script src="script.js"></script>
-</body>
+        </section>
+        <!--profile-->
+
+        <section id="about">
+            <p class="section__text__p1">Saiba mais</p>
+            <h1 class="title">Sobre mim</h1>
+            <div class="section-container">
+                <div class="section__pic-container">
+                    <img
+                        src="./assets/perfil-noite.png"
+                        alt="Profile picture"
+                        class="about-pic"
+                    />
+                </div>
+                <div class="about-details-container">
+                    <div class="about-containers">
+                        <div class="details-container">
+                            <img
+                                src="./assets/experience.png"
+                                alt="Experience icon"
+                                class="icon"
+                            />
+                            <h3>Experiência</h3>
+                            <p>
+                                2+ anos <br />Engenheiro de qualidade, <br />
+                                Desenvolvedor
+                            </p>
+                        </div>
+                        <div class="details-container">
+                            <img
+                                src="./assets/education.png"
+                                alt="Education icon"
+                                class="icon"
+                            />
+                            <h3>Formação</h3>
+                            <p>
+                                Pós em Testes Ágeis,<br />Ciência da Computação
+                            </p>
+                        </div>
+                    </div>
+                    <div class="text-container">
+                        <p>
+                            Pós-graduando em <span> Testes Ágeis</span>.
+                            Experiência como engenheiro de qualidade
+                            <span> em times internacionais</span>, trabalhando
+                            junto com desenvolvedores, project managers e outros
+                            stakeholders.
+                        </p>
+                        <br />
+                        <p>
+                            Eu também tenho experiência como
+                            <span>desenvolvedor full-stack </span> trabalhando
+                            em produtos web.
+                            <span>=)</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <img
+                src="./assets/arrow.png"
+                alt="Arrow icon"
+                class="icon arrow"
+                onclick="location.href='./#experience'"
+            />
+        </section>
+        <!--about-->
+
+        <section id="experience">
+            <p class="section__text__p1">Um pouco das minhas</p>
+            <h1 class="title">Habilidades</h1>
+            <div class="experience-details-container">
+                <!-- test  -->
+                <div class="experience-details-container">
+                    <div class="about-containers">
+                        <div class="details-container">
+                            <h2 class="experience-sub-title">
+                                Full-stack development
+                            </h2>
+                            <div class="article-container">
+                                <article>
+                                    <img
+                                        src="./assets/checkmark.png"
+                                        alt="Experience icon"
+                                        class="icon"
+                                    />
+                                    <div>
+                                        <h3>HTML/CSS</h3>
+                                        <p>Intermediário</p>
+                                    </div>
+                                </article>
+                                <article>
+                                    <img
+                                        src="./assets/checkmark.png"
+                                        alt="Experience icon"
+                                        class="icon"
+                                    />
+                                    <div>
+                                        <h3>JavaScript</h3>
+                                        <p>Básico</p>
+                                    </div>
+                                </article>
+                                <article>
+                                    <img
+                                        src="./assets/checkmark.png"
+                                        alt="Experience icon"
+                                        class="icon"
+                                    />
+                                    <div>
+                                        <h3>Bootstrap</h3>
+                                        <p>Intermediário</p>
+                                    </div>
+                                </article>
+                                <article>
+                                    <img
+                                        src="./assets/checkmark.png"
+                                        alt="Experience icon"
+                                        class="icon"
+                                    />
+                                    <div>
+                                        <h3>Git/GitHub</h3>
+                                        <p>Intermediário</p>
+                                    </div>
+                                </article>
+                                <article>
+                                    <img
+                                        src="./assets/checkmark.png"
+                                        alt="Experience icon"
+                                        class="icon"
+                                    />
+                                    <div>
+                                        <h3>Java</h3>
+                                        <p>Intermediário</p>
+                                    </div>
+                                </article>
+                                <article>
+                                    <img
+                                        src="./assets/checkmark.png"
+                                        alt="Experience icon"
+                                        class="icon"
+                                    />
+                                    <div>
+                                        <h3>PostgreSQL</h3>
+                                        <p>Básico</p>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+
+                        <div class="details-container">
+                            <h2 class="experience-sub-title">
+                                Quality Assurance
+                            </h2>
+                            <div class="article-container">
+                                <article>
+                                    <img
+                                        src="./assets/checkmark.png"
+                                        alt="Experience icon"
+                                        class="icon"
+                                    />
+                                    <div>
+                                        <h3>BDD</h3>
+                                        <p>Intermediário</p>
+                                    </div>
+                                </article>
+                                <article>
+                                    <img
+                                        src="./assets/checkmark.png"
+                                        alt="Experience icon"
+                                        class="icon"
+                                    />
+                                    <div>
+                                        <h3>Selenium</h3>
+                                        <p>Intermediário</p>
+                                    </div>
+                                </article>
+                                <article>
+                                    <img
+                                        src="./assets/checkmark.png"
+                                        alt="Experience icon"
+                                        class="icon"
+                                    />
+                                    <div>
+                                        <h3>Web/Mobile</h3>
+                                        <p>Intermediário</p>
+                                    </div>
+                                </article>
+                                <article>
+                                    <img
+                                        src="./assets/checkmark.png"
+                                        alt="Experience icon"
+                                        class="icon"
+                                    />
+                                    <div>
+                                        <h3>Bug Tracking</h3>
+                                        <p>Intermediário</p>
+                                    </div>
+                                </article>
+                                <article>
+                                    <img
+                                        src="./assets/checkmark.png"
+                                        alt="Experience icon"
+                                        class="icon"
+                                    />
+                                    <div>
+                                        <h3>Accessibility</h3>
+                                        <p>Intermediário</p>
+                                    </div>
+                                </article>
+                                <article>
+                                    <img
+                                        src="./assets/checkmark.png"
+                                        alt="Experience icon"
+                                        class="icon"
+                                    />
+                                    <div>
+                                        <h3>API Testing</h3>
+                                        <p>Básico</p>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- end test -->
+
+            <img
+                src="./assets/arrow.png"
+                alt="Arrow icon"
+                class="icon arrow"
+                onclick="location.href='./#certifications'"
+            />
+        </section>
+        <!--experience-->
+
+        <section id="certifications">
+            <p class="section__text__p1">Algumas das minhas</p>
+            <h1 class="title">Certificações</h1>
+            <div class="about-containers">
+                <div class="details-container">
+                    <img
+                        src="./assets/Delfin English School.png"
+                        alt="Experience icon"
+                        class="icon"
+                    />
+                    <h3>English C1</h3>
+                    <p>
+                        Curso de inglês em Londres. <br />
+                        
+                    </p>
+                </div>
+                <div class="details-container">
+                    <img
+                        src="./assets/udemy logo.png"
+                        alt="Education icon"
+                        class="icon"
+                    />
+                    <h3>SQL Completo</h3>
+                    <p>
+                        Aplicado ao Mercado de Trabalho.
+                        
+                    </p>
+                </div>
+                <div class="details-container">
+                    <img
+                        src="./assets/alura-logo.png"
+                        alt="Education icon"
+                        class="icon"
+                    />
+                    <h3>Formação Carreira QA</h3>
+                    <p>Processos e automação de testes.<br /></p>
+                </div>
+                <div class="details-container">
+                    <img
+                        src="./assets/certiprof-logo2.png"
+                        alt="Education icon"
+                        class="icon"
+                    />
+                    <h3>SFPC</h3>
+                    <p>Scrum Foundation Professional Certificate<br /></p>
+                </div>
+                <div class="details-container">
+                    <img
+                        src="./assets/java-logo.png"
+                        alt="Education icon"
+                        class="icon"
+                    />
+                    <h3>Java</h3>
+                    <p>Ministrado por Loiane Groner, Java Champion e autora. </p>
+                </div>
+            </div>
+
+            <img
+                src="./assets/arrow.png"
+                alt="Arrow icon"
+                class="icon arrow"
+                onclick="location.href='./#certifications'"
+            /><!--arrow-->
+        </section>
+        <!--certifications-->
+
+        <section id="projects">
+            <p class="section__text__p1">Alguns dos meus</p>
+            <h1 class="title">Projetos</h1>
+            <div class="projects-details-container">
+                <div class="about-containers">
+                    <!--project 1-->
+                    <div class="details-container color-container">
+                        <div class="article-container">
+                            <img
+                                src="./assets/projeto-teddy-resized.png"
+                                alt="Projeto TinDog"
+                                class="project-img"
+                            />
+                        </div>
+                        <h2 class="experience-sub-title project-title">
+                            TinDog
+                        </h2>
+                        <div class="btn-container">
+                            <a href="https://github.com/eltonccdantas/teddy" class="btn btn-color-1 btn-project" target="_blank"
+                                >Código Fonte</a
+                            >
+                            <a href="https://teddy-eltonccdantas-projects.vercel.app/" class="btn btn-color-1 btn-project" target="_blank"
+                                >Deploy</a
+                            >
+                        </div>
+                    </div>
+                    <!--end project 1-->
+
+                    <!--project 2-->
+                    <div class="details-container color-container">
+                        
+                        <div class="article-container">
+                            <img
+                                src="./assets/projeto-mobile.png"
+                                alt="Project 3"
+                                class="project-img"
+                            />
+                        </div>
+                        <h2 class="experience-sub-title project-title">
+                            Automação Mobile
+                        </h2>
+                        <div class="btn-container">
+                            <a href="https://github.com/eltonccdantas/appium_study" class="btn btn-color-1 btn-project" target="_blank"
+                                >Código Fonte</a
+                            >
+                            <a href="https://youtu.be/AhVbFuPbvIw" class="btn btn-color-1 btn-project" target="_blank"
+                                >Video Demo</a
+                            >
+                        </div>
+                    </div>
+                    <!--end project 2-->
+
+                    <!--project 3-->
+                    <div class="details-container color-container ">
+                        
+                        <div class="article-container">
+                            <img
+                                src="./assets/java-spring.png"
+                                alt="Project 3"
+                                class="project-img"
+                            />
+                        </div>
+                        <h2 class="experience-sub-title project-title">
+                            API Cardápio Digital
+                        </h2>
+                        <div class="btn-container">
+                            <a href="https://github.com/eltonccdantas/cardapio-java-spring" class="btn btn-color-1 btn-project" target="_blank"
+                                >Código Fonte</a
+                            >
+                            <!-- <a href="asdfsd" class="btn btn-color-1 btn-project" target="_blank"
+                                >Deploy</a
+                            > -->
+                        </div>
+                    </div>
+                    <!--end project3-->
+
+                    <!-- project 4-->
+                    <div class="details-container color-container">
+                        
+                        <div class="article-container">
+                            <img
+                                src="./assets/selenium-project.png"
+                                alt="Project 3"
+                                class="project-img"
+                            />
+                        </div>
+                        <h2 class="experience-sub-title project-title">
+                            Automação Web
+                        </h2>
+                        <div class="btn-container">
+                            <a href="https://github.com/eltonccdantas/seleniumJava" class="btn btn-color-1 btn-project" target="_blank"
+                                >Código Fonte</a
+                            >
+                            <!-- <a href="asdfsd" class="btn btn-color-1 btn-project" target="_blank"x'
+                                >Deploy</a
+                            > -->
+                        </div>
+                    </div>
+                    <!--end project4 -->
+
+                </div>
+                <!--end about-containers-->
+            </div>
+            <img
+                src="./assets/arrow.png"
+                alt="Arrow icon"
+                class="icon arrow"
+                onclick="location.href='./#contact'"
+            />
+        </section>
+        <!--projects-->
+
+        <section id="contact">
+            <p class="section__text__p1">Entre em</p>
+            <h1 class="title">Contato</h1>
+            <div class="contact-info-upper-container">
+                <div class="contact-info-container">
+                    <img
+                        src="./assets/email.png"
+                        alt="Email icon"
+                        class="icon contact-icon email-icon"
+                    />
+                    <p>
+                        <a
+                            href="mailto:elton.chagas.dantas@gmail.com"
+                            target="_blank"
+                            >elton.chagas.dantas@gmail.com</a
+                        >
+                    </p>
+                    <br />
+                </div>
+                <div class="contact-info-container">
+                    <a
+                        href="https://www.linkedin.com/in/eltonccdantas/"
+                        target="_blank"
+                    >
+                        <img
+                            src="./assets/linkedin.png"
+                            alt="Meu perfil no LinkedIn"
+                            class="icon"
+                        />
+                    </a>
+
+                    <a href="https://github.com/eltonccdantas" target="_blank">
+                        <img
+                            src="./assets/github.png"
+                            alt="Meu perfil no GitHub"
+                            class="icon"
+                        />
+                    </a>
+                    <a href="https://wa.me/5581998413730" target="_blank">
+                        <img
+                            src="./assets/whatsapp.png"
+                            alt="Meu WhatsApp"
+                            class="icon"
+                        />
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!--contact-->
+
+        <footer>
+            <nav>
+                <div class="nav-links-container">
+                    <ul class="nav-links">
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#experience">Habilidades</a></li>
+                        <li><a href="#certifications">Certificações</a></li>
+                        <li><a href="#projects">Projetos</a></li>
+                        <!-- <li><a href="#contact">Contato</a></li> -->
+                    </ul>
+                </div>
+            </nav>
+            <p>Elton Dantas <span>=)</span> <br />2024</p>
+        </footer>
+        <script src="script.js"></script>
+    </body>
 </html>
