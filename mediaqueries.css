@@ -28,9 +28,6 @@
         display: block;
     }
 
-    #about {
-        padding-top: 100px;
-    }
     .arrow {
         display: none;
     }
@@ -58,7 +55,6 @@
     }
     #profile {
         height: 83vh;
-        margin-bottom: -65%;
     }
     article {
         font-size: 1rem;
