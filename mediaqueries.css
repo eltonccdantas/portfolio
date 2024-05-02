@@ -80,6 +80,10 @@
     .nav-links li a {
         font-size: 1rem;
     }
+
+    .contact-info-container p{
+        font-size: 0.8rem;
+    }
     .experience-sub-title {
         font-size: 1.25rem;
     }
