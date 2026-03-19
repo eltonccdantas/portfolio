@@ -247,16 +247,8 @@ img { max-width: 100%; display: block; }
     height: 120px;
     border-radius: 2rem;
     margin: 0 auto 2rem;
-    background: rgb(53, 53, 53);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    overflow: hidden;
     box-shadow: 0 8px 32px rgba(53, 53, 53, 0.15);
-}
-
-#hero .app-icon svg {
-    width: 64px;
-    height: 64px;
 }
 
 .app-name {
