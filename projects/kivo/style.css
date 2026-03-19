@@ -1,0 +1,620 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   KIVO – Project Page Styles (extends portfolio design system)
+   ───────────────────────────────────────────────────────────────────────────── */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* ── Reset & Base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #fff;
+    color: rgb(85, 85, 85);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+html { scroll-behavior: smooth; }
+
+p { color: rgb(85, 85, 85); }
+
+a {
+    color: black;
+    text-decoration: none;
+    transition: all 300ms ease;
+}
+
+a:hover {
+    color: grey;
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+    text-decoration-color: rgb(181, 181, 181);
+}
+
+img { max-width: 100%; display: block; }
+
+/* ── Layout ── */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* ── Navigation ── */
+#desktop-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0 2rem;
+    border-bottom: 1px solid rgb(230, 230, 230);
+    position: sticky;
+    top: 0;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgb(53, 53, 53);
+    cursor: default;
+}
+
+.logo:hover { text-decoration: none; color: rgb(53, 53, 53); }
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: rgb(85, 85, 85);
+}
+
+.nav-links a:hover {
+    color: rgb(53, 53, 53);
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+    text-decoration-color: rgb(181, 181, 181);
+}
+
+/* ── Hamburger Nav ── */
+#hamburger-nav {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0 1.5rem;
+    border-bottom: 1px solid rgb(230, 230, 230);
+    position: sticky;
+    top: 0;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+}
+
+.hamburger-menu { position: relative; display: inline-block; }
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.hamburger-icon span {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: all 0.3s ease-in-out;
+    display: block;
+}
+
+.menu-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    width: fit-content;
+    min-width: 180px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.menu-links a {
+    display: block;
+    padding: 12px 20px;
+    text-align: left;
+    font-size: 1rem;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-links li { list-style: none; }
+.menu-links.open { max-height: 300px; }
+
+.hamburger-icon.open span:first-child { transform: rotate(45deg) translate(10px, 5px); }
+.hamburger-icon.open span:nth-child(2) { opacity: 0; }
+.hamburger-icon.open span:last-child { transform: rotate(-45deg) translate(10px, -5px); }
+
+/* ── Buttons ── */
+.btn {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 300ms ease;
+    padding: 0.8rem 1.6rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+.btn-color-1,
+.btn-color-2 {
+    border: rgb(53, 53, 53) 0.1rem solid;
+}
+
+.btn-color-1 {
+    background: rgb(53, 53, 53);
+    color: white;
+}
+
+.btn-color-1:hover {
+    background: rgb(0, 0, 0);
+    color: white;
+    text-decoration: none;
+}
+
+.btn-color-2 {
+    background: none;
+    color: rgb(53, 53, 53);
+}
+
+.btn-color-2:hover {
+    background: rgb(53, 53, 53);
+    color: white;
+    border-color: rgb(53, 53, 53);
+    text-decoration: none;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* ── Cards ── */
+.details-container {
+    padding: 1.5rem;
+    background: white;
+    border-radius: 2rem;
+    border: 0.1rem solid rgb(163, 163, 163);
+    text-align: center;
+}
+
+.details-container h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgb(53, 53, 53);
+    margin-bottom: 0.5rem;
+}
+
+/* ── Section Labels ── */
+.section__text__p1 {
+    color: rgb(160, 160, 160);
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 0.25rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: rgb(53, 53, 53);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* ── Hero Section ── */
+#hero {
+    padding: 6rem 2rem 4rem;
+    text-align: center;
+    background: linear-gradient(160deg, #f9f9fc 0%, #fff 60%);
+}
+
+#hero .app-icon {
+    width: 120px;
+    height: 120px;
+    border-radius: 2rem;
+    margin: 0 auto 2rem;
+    background: rgb(53, 53, 53);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 32px rgba(53, 53, 53, 0.15);
+}
+
+#hero .app-icon svg {
+    width: 64px;
+    height: 64px;
+}
+
+.app-name {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: rgb(53, 53, 53);
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.app-tagline {
+    font-size: 1.2rem;
+    color: rgb(110, 110, 110);
+    max-width: 520px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.7;
+}
+
+.platform-badges {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: rgb(85, 85, 85);
+    background: rgb(247, 247, 247);
+    border: 0.1rem solid rgb(200, 200, 200);
+    border-radius: 100px;
+    padding: 0.3rem 0.9rem;
+}
+
+/* ── Features Section ── */
+#features {
+    padding: 5rem 2rem;
+    background: #fff;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.feature-card {
+    padding: 2rem 1.5rem;
+    background: white;
+    border-radius: 2rem;
+    border: 0.1rem solid rgb(163, 163, 163);
+    text-align: center;
+    transition: transform 300ms ease, box-shadow 300ms ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.07);
+}
+
+.feature-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 1rem;
+    background: rgb(245, 245, 245);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.25rem;
+    font-size: 1.6rem;
+}
+
+.feature-card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgb(53, 53, 53);
+    margin-bottom: 0.6rem;
+}
+
+.feature-card p {
+    font-size: 0.9rem;
+    color: rgb(120, 120, 120);
+    line-height: 1.6;
+}
+
+/* ── About Section ── */
+#about {
+    padding: 5rem 2rem;
+    background: rgb(250, 250, 250);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.about-text p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: rgb(85, 85, 85);
+}
+
+.about-text p strong {
+    color: rgb(53, 53, 53);
+    font-weight: 600;
+}
+
+.about-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.stat-card {
+    padding: 1.5rem;
+    background: white;
+    border-radius: 2rem;
+    border: 0.1rem solid rgb(163, 163, 163);
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.stat-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.stat-card h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(53, 53, 53);
+    margin-bottom: 0.1rem;
+}
+
+.stat-card p {
+    font-size: 0.85rem;
+    color: rgb(130, 130, 130);
+    margin: 0;
+}
+
+/* ── Formats Section ── */
+#formats {
+    padding: 5rem 2rem;
+    background: #fff;
+}
+
+.formats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.format-card {
+    padding: 2rem;
+    background: white;
+    border-radius: 2rem;
+    border: 0.1rem solid rgb(163, 163, 163);
+    text-align: center;
+    transition: transform 300ms ease;
+}
+
+.format-card:hover { transform: translateY(-4px); }
+
+.format-emoji { font-size: 2.5rem; margin-bottom: 0.75rem; }
+
+.format-card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgb(53, 53, 53);
+    margin-bottom: 0.5rem;
+}
+
+.format-card p {
+    font-size: 0.85rem;
+    color: rgb(130, 130, 130);
+}
+
+.format-tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.75rem;
+}
+
+.format-tag {
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.2rem 0.6rem;
+    background: rgb(245, 245, 245);
+    border: 0.1rem solid rgb(200, 200, 200);
+    border-radius: 100px;
+    color: rgb(85, 85, 85);
+}
+
+/* ── Tech Section ── */
+#tech {
+    padding: 5rem 2rem;
+    background: rgb(250, 250, 250);
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.tech-card {
+    padding: 1.75rem 1.5rem;
+    background: white;
+    border-radius: 2rem;
+    border: 0.1rem solid rgb(163, 163, 163);
+    text-align: center;
+    transition: transform 300ms ease;
+}
+
+.tech-card:hover { transform: translateY(-4px); }
+
+.tech-logo {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.tech-card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(53, 53, 53);
+    margin-bottom: 0.4rem;
+}
+
+.tech-card p {
+    font-size: 0.82rem;
+    color: rgb(130, 130, 130);
+    line-height: 1.5;
+}
+
+/* ── Download Section ── */
+#download {
+    padding: 6rem 2rem;
+    background: rgb(53, 53, 53);
+    text-align: center;
+    color: white;
+}
+
+#download .section__text__p1 { color: rgba(255,255,255,0.5); }
+#download .title { color: white; }
+
+#download p.subtitle {
+    color: rgba(255,255,255,0.7);
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.download-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.store-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.9rem 1.6rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    transition: all 300ms ease;
+    border: 0.1rem solid rgba(255,255,255,0.3);
+    color: white;
+    background: rgba(255,255,255,0.1);
+}
+
+.store-btn:hover {
+    background: rgba(255,255,255,0.2);
+    border-color: rgba(255,255,255,0.5);
+    transform: translateY(-2px);
+    text-decoration: none;
+    color: white;
+}
+
+.store-btn-icon { font-size: 1.4rem; }
+
+.download-note {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.4);
+    margin-top: 1rem;
+}
+
+/* ── Footer ── */
+footer {
+    padding: 2rem;
+    text-align: center;
+    border-top: 1px solid rgb(230, 230, 230);
+}
+
+footer p {
+    font-size: 0.85rem;
+    color: rgb(163, 163, 163);
+}
+
+footer a {
+    color: rgb(85, 85, 85);
+    font-weight: 500;
+}
+
+footer a:hover { color: rgb(53, 53, 53); }
+
+/* ── Privacy link in nav ── */
+.nav-privacy {
+    font-size: 0.85rem;
+    color: rgb(130, 130, 130);
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+    .about-content { grid-template-columns: 1fr; gap: 2rem; }
+    .formats-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 640px) {
+    #desktop-nav { display: none; }
+    #hamburger-nav { display: flex; }
+
+    .app-name { font-size: 2.5rem; }
+    .app-tagline { font-size: 1rem; }
+
+    #hero { padding: 4rem 1.5rem 3rem; }
+    #features, #about, #formats, #tech, #download { padding: 3.5rem 1.5rem; }
+
+    .title { font-size: 2rem; }
+
+    .formats-grid { grid-template-columns: 1fr; }
+
+    .btn-container { flex-direction: column; align-items: center; }
+    .btn { width: 100%; max-width: 280px; justify-content: center; }
+
+    .download-buttons { flex-direction: column; align-items: center; }
+    .store-btn { width: 100%; max-width: 280px; justify-content: center; }
+}
