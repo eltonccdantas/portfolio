@@ -34,38 +34,6 @@
         #privacy-hero .title { margin-bottom: 0.5rem; }
         #privacy-hero p { font-size: 0.95rem; color: rgb(130, 130, 130); }
 
-        /* Language toggle */
-        .lang-toggle {
-            display: flex;
-            justify-content: center;
-            gap: 0.5rem;
-            margin-top: 1.5rem;
-        }
-
-        .lang-btn {
-            padding: 0.4rem 1.2rem;
-            border-radius: 100px;
-            border: 0.1rem solid rgb(163, 163, 163);
-            font-family: "Poppins", sans-serif;
-            font-size: 0.85rem;
-            font-weight: 500;
-            cursor: pointer;
-            background: none;
-            color: rgb(85, 85, 85);
-            transition: all 300ms ease;
-        }
-
-        .lang-btn.active {
-            background: rgb(53, 53, 53);
-            color: white;
-            border-color: rgb(53, 53, 53);
-        }
-
-        .lang-btn:hover:not(.active) {
-            background: rgb(245, 245, 245);
-            border-color: rgb(100, 100, 100);
-        }
-
         /* Privacy content */
         #privacy-content {
             padding: 4rem 2rem 5rem;
@@ -76,9 +44,6 @@
             max-width: 760px;
             margin: 0 auto;
         }
-
-        [data-lang] { display: none; }
-        [data-lang].active { display: block; }
 
         .privacy-body h2 {
             font-size: 1.5rem;
@@ -181,97 +146,13 @@
         <div class="privacy-badge">🔒 Privacy Policy</div>
         <h1 class="title">KIVO collects no data</h1>
         <p>See below all the details about how KIVO handles (or rather, doesn't handle) your information.</p>
-
-        <div class="lang-toggle">
-            <button class="lang-btn" onclick="setLang('pt')">Português</button>
-            <button class="lang-btn active" onclick="setLang('en')">English</button>
-        </div>
     </section>
 
     <!-- Content -->
     <section id="privacy-content">
         <div class="privacy-body">
 
-            <!-- ─── PORTUGUESE ─── -->
-            <div data-lang="pt">
-                <p class="last-updated">Última atualização: 19 de março de 2026</p>
-
-                <div class="privacy-highlight">
-                    <p>🔒 Resumo: O KIVO não coleta, armazena, transmite nem compartilha nenhum dado pessoal. Tudo acontece no seu dispositivo, sem conexão com servidores externos.</p>
-                </div>
-
-                <h2>1. Coleta de Dados</h2>
-                <p>O KIVO não coleta nenhum dado pessoal. Não há análises de uso, telemetria, relatórios de erros, SDKs de publicidade nem rastreamento de qualquer natureza no aplicativo.</p>
-                <p>Não sabemos quem você é, quais arquivos você comprime nem como você usa o app.</p>
-
-                <hr class="privacy-divider" />
-
-                <h2>2. Processamento de Arquivos</h2>
-                <p>Toda a compressão é realizada inteiramente no seu dispositivo, sem qualquer processamento externo. Seus arquivos nunca são enviados, transmitidos ou compartilhados com servidores ou terceiros.</p>
-                <p>O KIVO não exige conexão com a internet para funcionar. Nenhuma requisição de rede é feita durante o uso normal do aplicativo.</p>
-                <p>O arquivo original nunca é modificado ou excluído. O KIVO lê o arquivo de origem, cria uma cópia comprimida no local que você escolher e nada mais.</p>
-
-                <hr class="privacy-divider" />
-
-                <h2>3. Permissões</h2>
-                <p>O KIVO solicita apenas as permissões estritamente necessárias para realizar a compressão:</p>
-
-                <h3>Android</h3>
-                <ul>
-                    <li><strong>READ_MEDIA_IMAGES:</strong> permite selecionar arquivos de imagem.</li>
-                    <li><strong>READ_MEDIA_VIDEO:</strong> permite selecionar arquivos de vídeo.</li>
-                    <li><strong>READ_EXTERNAL_STORAGE</strong> (Android 12 e anteriores): permite a seleção de arquivos em versões mais antigas do Android.</li>
-                    <li><strong>WRITE_EXTERNAL_STORAGE</strong> (Android 9 e anteriores): permite salvar o arquivo comprimido em versões mais antigas do Android.</li>
-                </ul>
-
-                <h3>iOS / iPadOS</h3>
-                <p>O acesso a arquivos é fornecido pelo seletor de arquivos do sistema. Não é solicitado acesso amplo à biblioteca de fotos ou ao armazenamento.</p>
-
-                <h3>macOS / Windows / Linux</h3>
-                <p>O acesso ao sistema de arquivos é utilizado apenas para ler o arquivo que você selecionar via seletor de arquivos do sistema e para gravar o arquivo de saída no local que você escolher.</p>
-
-                <p>Nenhuma permissão é utilizada para finalidade diferente das descritas acima.</p>
-
-                <hr class="privacy-divider" />
-
-                <h2>4. Privacidade de Crianças</h2>
-                <p>O KIVO não coleta dados de ninguém, incluindo crianças menores de 13 anos (ou a idade de consentimento digital aplicável na sua jurisdição). O aplicativo não contém funcionalidades direcionadas a crianças que exijam tratamento especial de dados conforme legislações como o ECA, LGPD, COPPA ou GDPR-K.</p>
-
-                <hr class="privacy-divider" />
-
-                <h2>5. Serviços de Terceiros</h2>
-                <p>O KIVO não se integra a nenhum serviço de terceiros, plataformas de análise, redes de publicidade, SDKs de redes sociais ou provedores de armazenamento em nuvem.</p>
-                <p>O aplicativo utiliza apenas bibliotecas de código aberto para compressão (FFmpeg, flutter_image_compress, iText/pdf) que operam inteiramente no dispositivo e não fazem conexões externas.</p>
-
-                <hr class="privacy-divider" />
-
-                <h2>6. Segurança dos Dados</h2>
-                <p>Como o KIVO nunca transmite nem armazena seus dados fora do seu dispositivo, o risco de vazamento de dados originado pelo KIVO é zero. Seus arquivos permanecem sob seu total controle a qualquer momento.</p>
-
-                <hr class="privacy-divider" />
-
-                <h2>7. Seus Direitos (LGPD)</h2>
-                <p>Como o KIVO não coleta nenhum dado pessoal, não há dados armazenados para acessar, corrigir, exportar ou excluir. Todos os arquivos processados permanecem no seu dispositivo e podem ser gerenciados pelas ferramentas padrão do seu sistema operacional.</p>
-                <p>Caso você resida no Brasil, seus direitos são garantidos pela Lei Geral de Proteção de Dados (LGPD – Lei nº 13.709/2018). Em razão da ausência total de coleta de dados, nenhuma das obrigações previstas na LGPD se aplica ao KIVO, pois não há operação de tratamento de dados pessoais.</p>
-
-                <hr class="privacy-divider" />
-
-                <h2>8. Alterações nesta Política</h2>
-                <p>Caso esta política de privacidade seja atualizada no futuro, a nova versão será publicada juntamente com o lançamento correspondente do aplicativo. A data de "Última atualização" no topo deste documento refletirá a data da revisão.</p>
-                <p>O uso continuado do KIVO após uma atualização da política implica a aceitação dos novos termos.</p>
-
-                <hr class="privacy-divider" />
-
-                <h2>9. Contato</h2>
-                <p>Em caso de dúvidas ou preocupações sobre esta política de privacidade, entre em contato:</p>
-                <ul>
-                    <li><strong>Desenvolvedor:</strong> Elton Dantas</li>
-                    <li><strong>Site:</strong> <a href="https://eltonccdantas.com" target="_blank" rel="noopener">eltonccdantas.com</a></li>
-                </ul>
-            </div>
-
-            <!-- ─── ENGLISH ─── -->
-            <div data-lang="en" class="active">
+            <div>
                 <p class="last-updated">Last updated: March 19, 2026</p>
 
                 <div class="privacy-highlight">
@@ -334,13 +215,43 @@
 
                 <hr class="privacy-divider" />
 
-                <h2>8. Changes to This Policy</h2>
+                <h2>9. Disclaimer of Warranties</h2>
+                <p>KIVO is provided <strong>"as is"</strong> and <strong>"as available"</strong>, without warranty of any kind, express or implied. To the fullest extent permitted by applicable law, the developer expressly disclaims all warranties, including but not limited to:</p>
+                <ul>
+                    <li>Warranties of merchantability, fitness for a particular purpose, or non-infringement;</li>
+                    <li>That the application will be error-free, uninterrupted, or free of bugs or defects;</li>
+                    <li>That compression results will meet any specific quality, size, or performance expectations;</li>
+                    <li>That the application will be compatible with every device, operating system version, or file type.</li>
+                </ul>
+                <p>You use KIVO entirely at your own risk. It is your sole responsibility to maintain backups of your original files before using the application.</p>
+
+                <hr class="privacy-divider" />
+
+                <h2>10. Limitation of Liability</h2>
+                <p>To the maximum extent permitted by applicable law, the developer — Elton Dantas — shall not be liable for any direct, indirect, incidental, special, consequential, or exemplary damages arising from your use of or inability to use KIVO, including but not limited to:</p>
+                <ul>
+                    <li>Loss, corruption, or unintended modification of files;</li>
+                    <li>Unexpected or unwanted compression results;</li>
+                    <li>Data loss of any kind;</li>
+                    <li>Device incompatibility or software malfunction;</li>
+                    <li>Any other loss or damage, whether based on contract, tort, strict liability, or otherwise.</li>
+                </ul>
+                <p>This limitation applies even if the developer has been advised of the possibility of such damages. Some jurisdictions do not allow the exclusion of certain warranties or limitation of liability, so some of the above may not apply to you.</p>
+
+                <hr class="privacy-divider" />
+
+                <h2>11. Indemnification</h2>
+                <p>By using KIVO, you agree to indemnify and hold harmless the developer from any claims, damages, losses, liabilities, costs, or expenses (including legal fees) arising out of or related to your use of the application, your violation of these terms, or your violation of any applicable law or the rights of any third party.</p>
+
+                <hr class="privacy-divider" />
+
+                <h2>12. Changes to This Policy</h2>
                 <p>If this privacy policy is updated in the future, the new version will be published alongside the corresponding app release. The "Last updated" date at the top of this document will reflect the revision date.</p>
                 <p>Continued use of KIVO after a policy update constitutes acceptance of the new terms.</p>
 
                 <hr class="privacy-divider" />
 
-                <h2>9. Contact</h2>
+                <h2>13. Contact</h2>
                 <p>If you have questions or concerns about this privacy policy, please contact:</p>
                 <ul>
                     <li><strong>Developer:</strong> Elton Dantas</li>
@@ -370,16 +281,7 @@
             icon.classList.toggle("open");
         }
 
-        function setLang(lang) {
-            document.querySelectorAll('[data-lang]').forEach(el => {
-                el.classList.toggle('active', el.dataset.lang === lang);
-            });
-            document.querySelectorAll('.lang-btn').forEach((btn, i) => {
-                const langs = ['pt', 'en'];
-                btn.classList.toggle('active', langs[i] === lang);
-            });
-        }
-    </script>
+</script>
 
 </body>
 </html>

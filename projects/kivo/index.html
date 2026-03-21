@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KIVO – File Compression | Elton Dantas</title>
-    <meta name="description" content="KIVO is a free, offline file compressor for images, videos, and PDFs. Your files never leave your device." />
+    <meta name="description"
+        content="KIVO is a free, offline file compressor for images, videos, and PDFs. Your files never leave your device." />
     <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -79,32 +80,47 @@
                 <div class="feature-card">
                     <div class="feature-icon">🔒</div>
                     <h3>Complete privacy</h3>
-                    <p>Your files never leave your device. No external server is involved at any point in the process.</p>
+                    <p>Your files never leave your device. No external server is involved at any point in the process.
+                    </p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">📡</div>
+                    <div class="feature-icon">✈️</div>
                     <h3>100% offline</h3>
                     <p>KIVO doesn't need an internet connection to work. No network request is made during use.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">⚡</div>
                     <h3>Fast and efficient</h3>
-                    <p>Uses native hardware acceleration (MediaCodec on Android, VideoToolbox on iOS/macOS) for blazing-fast compression.</p>
+                    <p>Uses native hardware acceleration (MediaCodec on Android, VideoToolbox on iOS/macOS) for
+                        blazing-fast compression.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">🆓</div>
+                    <div class="feature-icon">🎁</div>
                     <h3>Completely free</h3>
                     <p>No ads, no paid plans, no usage limits. KIVO is and always will be free.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">⏱️</div>
                     <h3>Time estimate</h3>
-                    <p>Displays the estimated remaining time during compression so you always know when it will finish.</p>
+                    <p>Displays the estimated remaining time during compression so you always know when it will finish.
+                    </p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">✋</div>
+                    <div class="feature-icon">⏹️</div>
                     <h3>Cancel anytime</h3>
-                    <p>Started and changed your mind? Cancel compression at any time without losing the original file.</p>
+                    <p>Changed your mind mid-way? Cancel compression at any time without losing the original file.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎚️</div>
+                    <h3>Quality control</h3>
+                    <p>Fine-tune compression with an adjustable quality slider to find the right balance between file
+                        size and fidelity.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Size report</h3>
+                    <p>See exactly how much space was saved after each compression with a clear before-and-after
+                        summary.</p>
                 </div>
             </div>
         </div>
@@ -119,13 +135,13 @@
             <div class="about-content">
                 <div class="about-text">
                     <p>
-                        <strong>KIVO</strong> was born from a real need: sharing a video on WhatsApp without
+                        <strong>KIVO</strong> was born from a real need: attaching files in emails or Jira without
                         depending on an online service that would store your file on some unknown server.
                     </p>
                     <p>
-                        The core idea is simple — <strong>your file privacy belongs to you</strong>. Document
-                        photos, personal videos, PDFs with sensitive information: none of that needs to pass
-                        through third parties just to get smaller.
+                        The core idea is simple — <strong>your files are yours</strong>. Whether it's personal photos or
+                        company documents, sensitive data should never have to pass through a third-party server just to
+                        get smaller.
                     </p>
                     <p>
                         Built with <strong>Flutter</strong>, KIVO runs natively on Android, iOS, macOS, Windows,
@@ -144,14 +160,14 @@
                         <div class="stat-icon">🌍</div>
                         <div>
                             <h4>Cross-platform</h4>
-                            <p>Android, iOS, macOS, Windows, and Linux from a single Flutter codebase</p>
+                            <p>Android, iOS (coming soon), macOS, Windows, and Linux from a single Flutter codebase</p>
                         </div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-icon">🛡️</div>
                         <div>
                             <h4>Zero data collection</h4>
-                            <p>No telemetry, no analytics SDK, no tracking of any kind</p>
+                            <p>No telemetry, no analytics SDK, no tracking of any kind, no internet required</p>
                         </div>
                     </div>
                     <div class="stat-card">
@@ -159,13 +175,6 @@
                         <div>
                             <h4>Original untouched</h4>
                             <p>The source file is never modified or deleted — KIVO only creates a copy</p>
-                        </div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-icon">🔓</div>
-                        <div>
-                            <h4>Open source</h4>
-                            <p>Open source on GitHub — full transparency about what the app does (and doesn't)</p>
                         </div>
                     </div>
                 </div>
@@ -224,36 +233,50 @@
             <h2 class="title">Technology</h2>
 
             <div class="tech-grid">
-                <div class="tech-card">
+                <a class="tech-card" href="https://flutter.dev" target="_blank" rel="noopener">
                     <div class="tech-logo">🐦</div>
                     <h3>Flutter</h3>
                     <p>Google's cross-platform framework. One codebase, five platforms.</p>
-                </div>
-                <div class="tech-card">
+                </a>
+                <a class="tech-card" href="https://dart.dev" target="_blank" rel="noopener">
+                    <div class="tech-logo">🎯</div>
+                    <h3>Dart</h3>
+                    <p>The language powering Flutter. Type-safe, fast, and compiles to native ARM code on every
+                        platform.</p>
+                </a>
+                <a class="tech-card" href="https://ffmpeg.org" target="_blank" rel="noopener">
                     <div class="tech-logo">🎞️</div>
                     <h3>FFmpeg</h3>
                     <p>World-class audio and video processing, running locally via FFmpegKit.</p>
-                </div>
-                <div class="tech-card">
+                </a>
+                <a class="tech-card" href="https://github.com/arthenica/ffmpeg-kit" target="_blank" rel="noopener">
+                    <div class="tech-logo">📦</div>
+                    <h3>FFmpegKit</h3>
+                    <p>Flutter wrapper that brings full FFmpeg capabilities to Android, iOS, macOS, and desktop — no
+                        server needed.</p>
+                </a>
+                <a class="tech-card" href="https://pub.dev/packages/flutter_image_compress" target="_blank"
+                    rel="noopener">
                     <div class="tech-logo">🖼️</div>
                     <h3>flutter_image_compress</h3>
                     <p>Native image compression APIs — BitmapFactory (Android) and UIImage (iOS/macOS).</p>
-                </div>
-                <div class="tech-card">
+                </a>
+                <a class="tech-card" href="https://itextpdf.com" target="_blank" rel="noopener">
                     <div class="tech-logo">📑</div>
                     <h3>iText / pdf</h3>
                     <p>PDF document compression with intelligent re-compression of embedded images.</p>
-                </div>
-                <div class="tech-card">
+                </a>
+                <a class="tech-card" href="https://developer.android.com/reference/android/media/MediaCodec"
+                    target="_blank" rel="noopener">
                     <div class="tech-logo">⚙️</div>
                     <h3>Hardware Codecs</h3>
                     <p>MediaCodec (Android) and VideoToolbox (iOS/macOS) for hardware-accelerated video compression.</p>
-                </div>
-                <div class="tech-card">
-                    <div class="tech-logo">🔑</div>
+                </a>
+                <a class="tech-card" href="privacy.html">
+                    <div class="tech-logo">🔐</div>
                     <h3>Minimal permissions</h3>
                     <p>Only the minimum permissions needed to read the selected file and save the output.</p>
-                </div>
+                </a>
             </div>
         </div>
     </section>
@@ -266,7 +289,8 @@
             <p class="subtitle">Free, no account, no ads. Download and start compressing now.</p>
 
             <div class="download-buttons">
-                <a href="https://play.google.com/store/apps/details?id=com.sky.kivo" class="store-btn" target="_blank" rel="noopener">
+                <a href="https://play.google.com/store/apps/details?id=com.sky.kivo" class="store-btn" target="_blank"
+                    rel="noopener">
                     <span class="store-btn-icon">▶</span>
                     Google Play
                 </a>
@@ -278,7 +302,8 @@
                     <span class="store-btn-icon">🪟</span>
                     Microsoft Store
                 </a>
-                <a href="https://github.com/eltonccdantas/kivo/releases" class="store-btn" target="_blank" rel="noopener">
+                <a href="https://github.com/eltonccdantas/kivo/releases" class="store-btn" target="_blank"
+                    rel="noopener">
                     <span class="store-btn-icon">⬇</span>
                     GitHub Releases
                 </a>
@@ -313,4 +338,5 @@
     </script>
 
 </body>
+
 </html>

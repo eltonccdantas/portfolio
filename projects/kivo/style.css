@@ -470,16 +470,25 @@ img { max-width: 100%; display: block; }
     margin-top: 3rem;
 }
 
+a.tech-card {
+    text-decoration: none;
+    color: inherit;
+}
+
 .tech-card {
     padding: 1.75rem 1.5rem;
     background: white;
     border-radius: 2rem;
     border: 0.1rem solid rgb(163, 163, 163);
     text-align: center;
-    transition: transform 300ms ease;
+    transition: transform 300ms ease, box-shadow 300ms ease;
+    cursor: pointer;
 }
 
-.tech-card:hover { transform: translateY(-4px); }
+.tech-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.07);
+}
 
 .tech-logo {
     font-size: 2.5rem;
