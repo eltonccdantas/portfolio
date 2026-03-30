@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HotQ – Hotkey Framework for Manual Testing | Elton Dantas</title>
+    <meta name="description"
+        content="HotQ is a free, offline hotkey framework for manual testing. Screenshot, record, and highlight — all with simple keyboard shortcuts, right from your desktop." />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <!-- Desktop Nav -->
+    <nav id="desktop-nav">
+        <a href="../../index.html" class="logo" style="cursor: pointer; text-decoration: none;">Elton Dantas</a>
+        <ul class="nav-links">
+            <li><a href="../../index.html#projects">← Projects</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#download">Download</a></li>
+            <li><a href="privacy.html" class="nav-privacy">Privacy</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hamburger Nav -->
+    <nav id="hamburger-nav">
+        <a href="../../index.html" class="logo" style="cursor: pointer; text-decoration: none;">Elton Dantas</a>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="../../index.html#projects" onclick="toggleMenu()">← Projects</a></li>
+                <li><a href="#features" onclick="toggleMenu()">Features</a></li>
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#download" onclick="toggleMenu()">Download</a></li>
+                <li><a href="privacy.html" onclick="toggleMenu()">Privacy</a></li>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="hero">
+        <div class="app-icon">
+            <img src="hotq-logo.png" alt="HotQ logo"
+                style="width:100%;height:100%;object-fit:contain;border-radius:2rem;" />
+        </div>
+
+        <h1 class="app-name">HotQ</h1>
+        <p class="app-tagline">
+            Hotkey framework for manual testing.<br />
+            Screenshot, record, and highlight — instantly, offline.
+        </p>
+
+        <div class="platform-badges">
+            <span class="badge"><img src="../assets/apple-color.svg" alt="" /> macOS</span>
+            <span class="badge"><img src="../assets/windows.svg" alt="" /> Windows</span>
+            <span class="badge"><img src="../assets/linux.svg" alt="" /> Linux</span>
+        </div>
+
+        <div class="btn-container">
+            <a href="#download" class="btn btn-color-1">Download now</a>
+            <a href="#features" class="btn btn-color-2">View features</a>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features">
+        <div class="container">
+            <p class="section__text__p1">Why use</p>
+            <h2 class="title">HotQ?</h2>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📸</div>
+                    <h3>Screenshot capture</h3>
+                    <p>Instant screenshots with a single hotkey. Capture the full screen or a selected window — no
+                        menus, no interruptions.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎬</div>
+                    <h3>Screen recording</h3>
+                    <p>Record bug reproductions and test walkthroughs without switching apps. Start and stop with a
+                        keyboard shortcut.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Area highlighting</h3>
+                    <p>Draw attention to exactly what matters. Highlight specific screen regions during testing or
+                        demonstrations.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Privacy first</h3>
+                    <p>All screenshots and recordings stay on your device. No cloud uploads, no accounts, no data
+                        collection of any kind.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+        <div class="container">
+            <p class="section__text__p1">The story behind</p>
+            <h2 class="title">HotQ</h2>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        <strong>HotQ</strong> was built to solve a friction QA engineers face every day: having to
+                        leave the application being tested just to open a screenshot tool, start a recorder, or annotate
+                        a screen.
+                    </p>
+                    <p>
+                        The name says it all — <strong>hot keys for QA</strong>. Every essential testing capture tool
+                        mapped to a keyboard shortcut, running silently in the background, ready whenever you need it.
+                    </p>
+                    <p>
+                        Built with <strong>Flutter</strong>, HotQ runs natively on macOS, Windows, and Linux from a
+                        single codebase. All processing happens locally — nothing ever leaves your machine.
+                    </p>
+                </div>
+
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">🖥️</div>
+                        <div>
+                            <h4>Desktop-native</h4>
+                            <p>macOS, Windows, and Linux — integrated with the menu bar and system tray</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🛡️</div>
+                        <div>
+                            <h4>Zero data collection</h4>
+                            <p>No telemetry, no analytics, no cloud — everything stays on your machine</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">⚡</div>
+                        <div>
+                            <h4>Instant access</h4>
+                            <p>Runs in the background with minimal resources — hotkeys always ready</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech -->
+    <section id="tech">
+        <div class="container">
+            <p class="section__text__p1">Built with</p>
+            <h2 class="title">Technology</h2>
+
+            <div class="tech-grid">
+                <a class="tech-card" href="https://flutter.dev" target="_blank" rel="noopener">
+                    <div class="tech-logo"><img src="../assets/flutter.svg" alt="Flutter" /></div>
+                    <h3>Flutter</h3>
+                    <p>Google's cross-platform framework. One codebase, three desktop platforms.</p>
+                </a>
+                <a class="tech-card" href="https://dart.dev" target="_blank" rel="noopener">
+                    <div class="tech-logo">🎯</div>
+                    <h3>Dart</h3>
+                    <p>Type-safe, fast, and compiles to native code on every desktop platform.</p>
+                </a>
+                <div class="tech-card">
+                    <div class="tech-logo">🖥️</div>
+                    <h3>System integration</h3>
+                    <p>Native menu bar (macOS) and system tray (Windows / Linux) for seamless background operation.</p>
+                </div>
+                <a class="tech-card" href="privacy.html">
+                    <div class="tech-logo">🔑</div>
+                    <h3>Minimal permissions</h3>
+                    <p>Only the permissions needed to capture the screen and save files locally.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download -->
+    <section id="download">
+        <div class="container">
+            <p class="section__text__p1">Available on</p>
+            <h2 class="title">All platforms</h2>
+            <p class="subtitle">Free, no account, no ads. Download and start testing now.</p>
+
+            <div class="download-buttons">
+                <a href="https://github.com/eltonccdantas/hotq/releases" class="store-btn" target="_blank"
+                    rel="noopener">
+                    <span class="store-btn-icon">⬇️</span>
+                    GitHub Releases
+                </a>
+                <a href="#" class="store-btn" style="opacity: 0.5; cursor: default;" onclick="return false;">
+                    <span class="store-btn-icon"><img src="../assets/apple-color.svg" alt="Apple" /></span>
+                    macOS App Store <br>(coming soon)
+                </a>
+                <a href="#" class="store-btn" style="opacity: 0.5; cursor: default;" onclick="return false;">
+                    <span class="store-btn-icon"><img src="../assets/windows.svg" alt="Windows" /></span>
+                    Microsoft Store <br>(coming soon)
+                </a>
+            </div>
+
+            <p class="download-note">
+                &nbsp;·&nbsp;
+                <a href="privacy.html" style="color: rgba(255,255,255,0.5);">Privacy Policy</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            &copy; 2026 <a href="../../index.html">Elton Dantas</a>
+            &nbsp;·&nbsp;
+            <a href="privacy.html">Privacy Policy</a>
+            &nbsp;·&nbsp;
+            <a href="https://github.com/eltonccdantas/hotq" target="_blank" rel="noopener">GitHub</a>
+        </p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector(".menu-links");
+            const icon = document.querySelector(".hamburger-icon");
+            menu.classList.toggle("open");
+            icon.classList.toggle("open");
+        }
+    </script>
+
+</body>
+
+</html>
