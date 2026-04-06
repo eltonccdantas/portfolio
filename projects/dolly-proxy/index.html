@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dolly Proxy – HTTP/HTTPS Debugging Proxy | Elton Dantas</title>
+    <meta name="description"
+        content="Dolly Proxy is a free, open-source HTTP/HTTPS debugging proxy for desktop. Inspect, intercept, and edit live traffic — 100% local, no subscription." />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- Desktop Nav -->
+    <nav id="desktop-nav">
+        <a href="../../index.html" class="logo" style="cursor: pointer; text-decoration: none;">Elton Dantas</a>
+        <ul class="nav-links">
+            <li><a href="../../index.html#projects">← Projects</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#download">Download</a></li>
+            <li><a href="privacy.html" class="nav-privacy">Privacy</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hamburger Nav -->
+    <nav id="hamburger-nav">
+        <a href="../../index.html" class="logo" style="cursor: pointer; text-decoration: none;">Elton Dantas</a>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="../../index.html#projects" onclick="toggleMenu()">← Projects</a></li>
+                <li><a href="#features" onclick="toggleMenu()">Features</a></li>
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#download" onclick="toggleMenu()">Download</a></li>
+                <li><a href="privacy.html" onclick="toggleMenu()">Privacy</a></li>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="hero">
+        <div class="app-icon">
+            <img src="logo.png" alt="Dolly Proxy logo"
+                style="width:100%;height:100%;object-fit:contain;border-radius:2rem;" />
+        </div>
+
+        <h1 class="app-name">Dolly Proxy</h1>
+        <p class="app-tagline">
+            HTTP/HTTPS debugging proxy for desktop.<br />
+            Inspect, intercept, and edit live traffic — free and 100% local.
+        </p>
+
+        <div class="platform-badges">
+            <span class="badge"><img src="../assets/apple-color.svg" alt="macOS" /> macOS</span>
+            <span class="badge"><img src="../assets/windows.svg" alt="Windows" /> Windows</span>
+            <span class="badge"><img src="../assets/linux.svg" alt="Linux" /> Linux</span>
+        </div>
+
+        <div class="btn-container">
+            <a href="#download" class="btn btn-color-1">Download now</a>
+            <a href="#features" class="btn btn-color-2">View features</a>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features">
+        <div class="container">
+            <p class="section__text__p1">Why use</p>
+            <h2 class="title">Dolly Proxy?</h2>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3>HTTP/HTTPS interception</h3>
+                    <p>Full MITM proxy via mitmproxy with TLS 1.3 support. Inspect every request and response — headers,
+                        body, timing, and client IP — in real time.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✏️</div>
+                    <h3>Request editing</h3>
+                    <p>Pause flows mid-flight and modify the method, URL, headers, or body before they reach the server.
+                        Resume or drop — you're in full control.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Android device support</h3>
+                    <p>One-click ADB setup: system CA install, proxy config, and Frida server push. Universal SSL
+                        unpinning so you can inspect any app's traffic.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🆓</div>
+                    <h3>Free and open source</h3>
+                    <p>No subscription, no account, no usage limits. A full alternative to Proxyman and Charles Proxy —
+                        completely free, forever.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+        <div class="container">
+            <p class="section__text__p1">The story behind</p>
+            <h2 class="title">Dolly Proxy</h2>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        <strong>Dolly Proxy</strong> was built out of frustration with the cost of professional
+                        HTTP debugging tools. Proxyman and Charles Proxy are excellent — but they're paid,
+                        and not everyone should need a subscription just to inspect network traffic.
+                    </p>
+                    <p>
+                        The goal is simple: a <strong>free, open-source alternative</strong> that doesn't
+                        compromise on features. HTTPS interception, request editing, Android device support,
+                        SSL unpinning — all of it, at no cost.
+                    </p>
+                    <p>
+                        Built with <strong>Flutter</strong> for the UI and <strong>Python + mitmproxy</strong>
+                        for the proxy engine. The two communicate over WebSocket in real time. All traffic
+                        stays entirely on your machine — nothing is ever sent anywhere.
+                    </p>
+                </div>
+
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">🖥️</div>
+                        <div>
+                            <h4>Cross-platform</h4>
+                            <p>macOS, Windows, and Linux from a single Flutter + Python codebase</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🔒</div>
+                        <div>
+                            <h4>100% local</h4>
+                            <p>All traffic is intercepted and processed on your machine — never sent to any server</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">📱</div>
+                        <div>
+                            <h4>Android-ready</h4>
+                            <p>One-click device setup via ADB, with Frida-based SSL unpinning for any app</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech -->
+    <section id="tech">
+        <div class="container">
+            <p class="section__text__p1">Built with</p>
+            <h2 class="title">Technology</h2>
+
+            <div class="tech-grid">
+                <a class="tech-card" href="https://flutter.dev" target="_blank" rel="noopener">
+                    <div class="tech-logo"><img src="../assets/flutter.svg" alt="Flutter" /></div>
+                    <h3>Flutter</h3>
+                    <p>Google's cross-platform framework with Dart and Riverpod. One codebase for macOS,
+                        Windows, and Linux.</p>
+                </a>
+                <a class="tech-card" href="https://mitmproxy.org" target="_blank" rel="noopener">
+                    <div class="tech-logo">🐍</div>
+                    <h3>Python / mitmproxy</h3>
+                    <p>The proxy engine runs as a Python child process using mitmproxy and asyncio — handling
+                        all HTTPS interception and TLS termination.</p>
+                </a>
+                <div class="tech-card">
+                    <div class="tech-logo">🔌</div>
+                    <h3>WebSocket</h3>
+                    <p>Flutter and the Python proxy communicate over a local WebSocket connection, streaming
+                        flows to the UI in real time with minimal latency.</p>
+                </div>
+                <a class="tech-card" href="https://frida.re" target="_blank" rel="noopener">
+                    <div class="tech-logo">🤖</div>
+                    <h3>ADB + Frida</h3>
+                    <p>Android device management via ADB and universal SSL unpinning via Frida — automatically
+                        downloaded and configured on first use.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download -->
+    <section id="download">
+        <div class="container">
+            <p class="section__text__p1">Available on</p>
+            <h2 class="title">All platforms</h2>
+            <p class="subtitle">Free, no account, no ads. Download and start inspecting now.</p>
+
+            <div class="download-buttons">
+                <a href="https://github.com/eltonccdantas/dolly-proxy/releases" class="store-btn" target="_blank"
+                    rel="noopener">
+                    <span class="store-btn-icon">⬇️</span>
+                    GitHub Releases
+                </a>
+                <a href="#" class="store-btn" style="opacity: 0.5; cursor: default;" onclick="return false;">
+                    <span class="store-btn-icon"><img src="../assets/apple-color.svg" alt="Apple" /></span>
+                    macOS App Store <br>(coming soon)
+                </a>
+                <a href="#" class="store-btn" style="opacity: 0.5; cursor: default;" onclick="return false;">
+                    <span class="store-btn-icon"><img src="../assets/windows.svg" alt="Windows" /></span>
+                    Microsoft Store <br>(coming soon)
+                </a>
+            </div>
+
+            <p class="download-note">
+                &nbsp;·&nbsp;
+                <a href="privacy.html" style="color: rgba(255,255,255,0.5);">Privacy Policy</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            &copy; 2026 <a href="../../index.html">Elton Dantas</a>
+            &nbsp;·&nbsp;
+            <a href="privacy.html">Privacy Policy</a>
+            &nbsp;·&nbsp;
+            <a href="https://github.com/eltonccdantas/dolly-proxy" target="_blank" rel="noopener">GitHub</a>
+        </p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector(".menu-links");
+            const icon = document.querySelector(".hamburger-icon");
+            menu.classList.toggle("open");
+            icon.classList.toggle("open");
+        }
+    </script>
+
+</body>
+
+</html>
