@@ -90,25 +90,18 @@ function updateCarousel() {
 
     if (!wrapper || !track || slides.length === 0) return;
 
-    // Remover classe center de todas as slides
-    slides.forEach(slide => slide.classList.remove("center"));
+    slides.forEach((slide, index) => {
+        slide.classList.toggle("center", index === currentProjectSlide);
+    });
 
-    // Adicionar classe center apenas ao slide atual
-    slides[currentProjectSlide].classList.add("center");
+    const activeSlide = slides[currentProjectSlide];
+    if (!activeSlide) return;
 
-    // Scroll para centralizar o slide
-    const slide = slides[currentProjectSlide];
-    const trackLeft = track.offsetLeft;
-    const slideLeft = slide.offsetLeft - trackLeft;
-    const slideWidth = slide.offsetWidth;
-    const wrapperWidth = wrapper.offsetWidth;
+    const activeCenter = activeSlide.offsetLeft + (activeSlide.offsetWidth / 2);
+    const wrapperCenter = wrapper.offsetWidth / 2;
+    const translate = wrapperCenter - activeCenter;
 
-    // Calcular scroll para centralizar o slide
-    const scrollPosition = slideLeft + slideWidth / 2 - wrapperWidth / 2;
-
-    wrapper.scrollLeft = scrollPosition;
-
-    // Atualizar dots
+    track.style.transform = `translate3d(${translate}px, 0, 0)`;
     updateDots();
 }
 
